@@ -18,9 +18,9 @@ class TaskList extends React.Component {
     });
 
     return (
-      <ul className="task-list list-group">
-        { taskItems }
-      </ul>
+        <ul className="task-list list-group">
+          { taskItems }
+        </ul>
     )
   }
 }

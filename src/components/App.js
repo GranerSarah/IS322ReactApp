@@ -15,7 +15,6 @@ class App extends React.Component {
   }
 
   getData() {
-    //axios.get('tasks.json')
     axios.get('http://my-json-server.typicode.com/bnissen24/project2DB/posts')
       .then(response => {
         this.setState({ tasks: response.data });
