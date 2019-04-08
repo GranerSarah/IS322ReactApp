@@ -16,11 +16,11 @@ class App extends React.Component {
 
   getData() {
     axios.get('http://my-json-server.typicode.com/bnissen24/project2DB/posts')
-      .then(response => {
-        this.setState({ tasks: response.data });
-      }).catch(error => {
-        this.setState({ errorMessage: error.message });
-      });
+        .then(response => {
+          this.setState({tasks: response.data});
+        }).catch(error => {
+      this.setState({errorMessage: error.message});
+    });
   }
 
   onAddTask = (taskName) => {
@@ -32,19 +32,19 @@ class App extends React.Component {
       column: 'todo'
     });
 
-    this.setState({ tasks });
+    this.setState({tasks});
   }
 
   onUpdateTaskList = (newTaskList) => {
-    this.setState({ tasks: newTaskList });
+    this.setState({tasks: newTaskList});
   }
 
   render() {
     return (
-      <div className="container">
-        <AddTask onSubmit={this.onAddTask} />
-        <TaskList tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList} />
-      </div>
+        <div className="container">
+          <AddTask onSubmit={this.onAddTask}/>
+          <TaskList tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList}/>
+        </div>
     );
   }
 }
