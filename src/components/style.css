@@ -1,0 +1,17 @@
+/*add style.js to components */
+
+.testing {
+    border: 2px solid blue;
+    margin-left: 10px;
+}
+
+h2 {
+    border: 2px solid red;
+}
+
+p {
+    border: 5px solid green;
+    margin-left: 20px;
+}
+
+
