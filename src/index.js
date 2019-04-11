@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 //create basic functional react component
 const App = () => {
-    return <h1>The Tasker: A Task List Exampleg</h1>
+    return <h1>The Tasker: A Task List Example</h1>
 }
 
 
