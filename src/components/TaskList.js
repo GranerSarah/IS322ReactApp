@@ -48,6 +48,18 @@ class TaskList extends React.Component {
           }
       });
 
+      const reviewItems = this.props.tasks.map(task => {
+          if(task.column==='review') {
+              return <TaskItem task={task} key={task.id} markDone={this.markDone} unDone={this.unDone}/>
+          }
+      });
+
+      const doneItems = this.props.tasks.map(task => {
+          if(task.column==='done') {
+              return <TaskItem task={task} key={task.id} markDone={this.markDone} unDone={this.unDone}/>
+          }
+      });
+
     return(
         <section id="taskboard">
           <article id="ToDos" className="boards">
@@ -60,6 +72,18 @@ class TaskList extends React.Component {
                 <h2>In Progress</h2>
                 <ul className="task-list list-group">
                     {progressItems}
+                </ul>
+            </article>
+            <article id="Reviews" className="boards">
+                <h2>Review</h2>
+                <ul className="task-list list-group">
+                    {reviewItems}
+                </ul>
+            </article>
+            <article id="Dones" className="boards">
+                <h2>Done</h2>
+                <ul className="task-list list-group">
+                    {doneItems}
                 </ul>
             </article>
         </section>
