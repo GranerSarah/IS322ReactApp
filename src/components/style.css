@@ -5,15 +5,27 @@
     margin-left: 10px;
 }
 
-h2 {
-    border: 2px solid red;
-}
-
 .button {
     border: 5px solid green;
     margin-left: 20px;
 }
 
+li.list-group-item{
+    text-align: center;
+    vertical-align: center;
+    font-weight:bold;
+}
 
+li.navOptions{
+    display:inline-block;
+    margin:1em;
+}
 
+article.boards{
+    display:inline-block;
+    width:25%;
+}
 
+.pageTabs{
+    text-align: center;
+}
