@@ -6,7 +6,7 @@ const TaskItem = props => {
       <li className="list-group-item">
           <button type="button"
                   onClick={() => props.unDone(props.task)}
-                  className="btn btn-primary" style={{ float: 'left' }}>
+                  className="btn btn-secondary" style={{ float: 'left' }}>
               Undo
           </button>
         { props.task.title }
