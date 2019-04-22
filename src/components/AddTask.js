@@ -1,13 +1,13 @@
 import React from 'react';
 
 class AddTask extends React.Component {
-  state = { newTask: '' }
+  state = { newTask: ''}
 
   onFormSubmit = (event) => {
     event.preventDefault();
 
     this.props.onSubmit(this.state.newTask);
-    this.setState({ newTask: '' })
+    this.setState({ newTask: '' });
   }
 
   render() {
@@ -18,7 +18,9 @@ class AddTask extends React.Component {
                name="newTask"
                value={this.state.newTask}
                onChange={(e) => this.setState({ newTask: e.target.value })} />
+        <button type="submit" className="task-input form-group" onSubmit={this.onFormSubmit}>Submit</button>
       </form>
+
     );
   }
 }

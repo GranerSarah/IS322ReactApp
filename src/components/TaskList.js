@@ -37,25 +37,25 @@ class TaskList extends React.Component {
 
   render() {
       const todoItems = this.props.tasks.map(task => {
-          if(task.column==='todo') {
+          if(task.column=='todo') {
               return <TaskItem task={task} key={task.id} markDone={this.markDone} unDone={this.unDone}/>
           }
       });
 
       const progressItems = this.props.tasks.map(task => {
-          if(task.column==='in-progress') {
+          if(task.column=='in-progress') {
               return <TaskItem task={task} key={task.id} markDone={this.markDone} unDone={this.unDone}/>
           }
       });
 
       const reviewItems = this.props.tasks.map(task => {
-          if(task.column==='review') {
+          if(task.column=='review') {
               return <TaskItem task={task} key={task.id} markDone={this.markDone} unDone={this.unDone}/>
           }
       });
 
       const doneItems = this.props.tasks.map(task => {
-          if(task.column==='done') {
+          if(task.column=='done') {
               return <TaskItem task={task} key={task.id} markDone={this.markDone} unDone={this.unDone}/>
           }
       });
